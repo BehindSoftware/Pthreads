@@ -179,6 +179,7 @@ int Task_dequeue( TskNodePtr *headPtr, TskNodePtr *tailPtr, Tsk_node_s *node)
 
 	if (*headPtr == NULL){						//if queue is empty
 		*tailPtr = NULL;
+		return ERR;
 	}
 
 	free(tempPtr);
@@ -216,7 +217,6 @@ void Task_enqueue(TskNodePtr *headPtr, TskNodePtr *tailPtr, Tsk_node_s *node)
 
 void Task_queue(int n){
 	int i=0;
-	Tsk_node_s task_node;
 
 	printf("Generated %d random list tasks...\n",n);
 	for(i=1;i<=n;i++){			//creating task nodes and add to enqueue

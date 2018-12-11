@@ -27,6 +27,7 @@ struct tsk_node_s {
 typedef struct tsk_node_s Tsk_node_s;
 typedef Tsk_node_s *TskNodePtr;
 
+Tsk_node_s task_node;
 
 void printList( LstNodePtr currentPtr );
 void find_and_deleteDuplicates(LstNodePtr *sPtr);

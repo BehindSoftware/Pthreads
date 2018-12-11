@@ -11,7 +11,7 @@ all: pthreads
 	$(CC) $(CFLAGS) -c $<
 	
 pthreads: $(OBJ)
-	$(CC) -O2 $(OBJ) -o pthreads 
+	$(CC) -O2 $(OBJ) -o pthreads -lpthread
 	chmod 777 pthreads
 	
 clean: 
